@@ -1,0 +1,68 @@
+// ==========================================================================
+// COMPONENT - Buttons
+// Botones reutilizables con metodología BEM
+// ==========================================================================
+
+.btn {
+    @include button-base;
+
+    // Modificador: botón primario
+    &--primary {
+        @include button-variant($color-primary, $color-primary-dark);
+    }
+
+    // Modificador: botón secundario
+    &--secondary {
+        @include button-variant($color-secondary, $color-secondary-dark);
+    }
+
+    // Modificador: botón con acento
+    &--accent {
+        @include button-variant($color-accent, $color-accent-dark);
+    }
+
+    // Modificador: botón outline
+    &--outline {
+        background-color: transparent;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+        }
+    }
+
+    // Modificador: botón grande
+    &--large {
+        padding: $spacing-md $spacing-xl;
+        font-size: $font-size-lg;
+    }
+
+    // Modificador: botón pequeño
+    &--small {
+        padding: $spacing-xs $spacing-sm;
+        font-size: $font-size-sm;
+    }
+
+    // Modificador: botón de ancho completo
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    // Modificador: botón con gradiente
+    &--gradient {
+        @include gradient-primary;
+        color: $color-white;
+        border: none;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-lg;
+            opacity: 0.9;
+        }
+    }
+}

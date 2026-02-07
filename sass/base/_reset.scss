@@ -1,0 +1,88 @@
+// ==========================================================================
+// RESET - Normalización de estilos base
+// ==========================================================================
+
+/* Box sizing para todos los elementos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuración base del HTML */
+html {
+    font-size: 16px; // Base para rem
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: 1.6;
+    color: $color-gray-800;
+    background-color: $color-gray-50;
+}
+
+/* Headings reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: $font-display;
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+    color: $color-gray-900;
+}
+
+/* Links reset */
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+        color: $color-primary-dark;
+    }
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lists reset */
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Buttons reset */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Inputs y forms */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}

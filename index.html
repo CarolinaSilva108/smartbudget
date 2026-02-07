@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartBudget - Gestiona tus finanzas personales de forma intuitiva y profesional">
+    <title>SmartBudget | Tu aliado en finanzas personales</title>
+    
+    <!-- Bootstrap 4.6 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS compilado -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <!-- ========================================
+         HEADER - Navegación Principal
+         Etiqueta semántica: <header> + <nav>
+         Bootstrap: navbar responsive con collapse
+    ========================================= -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+            <div class="container">
+                <!-- Logo/Brand -->
+                <a class="navbar-brand navbar__brand" href="index.html">
+                    <i class="fas fa-wallet text-primary"></i> SmartBudget
+                </a>
+                
+                <!-- Hamburger menu para mobile -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Menu de navegación (colapsa en mobile) -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto navbar__menu">
+                        <li class="nav-item navbar__item">
+                            <a class="nav-link navbar__link navbar__link--active" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item navbar__item">
+                            <a class="nav-link navbar__link" href="#funcionalidades">Funcionalidades</a>
+                        </li>
+                        <li class="nav-item navbar__item">
+                            <a class="nav-link navbar__link" href="#beneficios">Beneficios</a>
+                        </li>
+                        <li class="nav-item navbar__item">
+                            <a class="nav-link navbar__link" href="#testimonios">Testimonios</a>
+                        </li>
+                        <li class="nav-item navbar__item">
+                            <a class="nav-link navbar__link" href="#precios">Precios</a>
+                        </li>
+                    </ul>
+                    <!-- CTA Button en navbar -->
+                    <button class="btn btn-primary ml-lg-3 navbar__cta" data-toggle="modal" data-target="#modalRegistro">
+                        Comenzar gratis
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- ========================================
+         MAIN - Contenido Principal
+         Etiqueta semántica: <main>
+    ========================================= -->
+    <main>
+        
+        <!-- SECCIÓN HERO - Primera impresión -->
+        <section id="inicio" class="hero">
+            <div class="hero__container">
+                <!-- Contenido de texto -->
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Controla tus <span>finanzas</span> con inteligencia
+                    </h1>
+                    <p class="hero__description lead">
+                        SmartBudget te ayuda a visualizar, planificar y optimizar tu dinero. 
+                        Toma decisiones financieras inteligentes con nuestra plataforma intuitiva.
+                    </p>
+                    <div class="hero__cta">
+                        <button class="btn btn--primary btn--large btn--gradient" data-toggle="modal" data-target="#modalRegistro">
+                            <i class="fas fa-rocket mr-2"></i> Comenzar ahora
+                        </button>
+                        <button class="btn btn--outline btn--large" data-toggle="modal" data-target="#modalDemo">
+                            <i class="fas fa-play-circle mr-2"></i> Ver demo
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Imagen ilustrativa -->
+                <div class="hero__image">
+                    <img src="https://via.placeholder.com/600x400/2563eb/ffffff?text=SmartBudget+Dashboard" 
+                         alt="Dashboard de SmartBudget" class="img-fluid">
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN ESTADÍSTICAS -->
+        <section class="stats">
+            <div class="stats__container">
+                <div class="stats__grid">
+                    <div class="stats__item">
+                        <h3>50K+</h3>
+                        <p>Usuarios activos</p>
+                    </div>
+                    <div class="stats__item">
+                        <h3>$2M+</h3>
+                        <p>Dinero gestionado</p>
+                    </div>
+                    <div class="stats__item">
+                        <h3>98%</h3>
+                        <p>Satisfacción</p>
+                    </div>
+                    <div class="stats__item">
+                        <h3>24/7</h3>
+                        <p>Soporte disponible</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN FUNCIONALIDADES -->
+        <!-- Bootstrap Cards para mostrar características -->
+        <section id="funcionalidades" class="features">
+            <div class="features__container">
+                <div class="features__header">
+                    <h2>Funcionalidades que transforman tu economía</h2>
+                    <p class="lead">
+                        Herramientas diseñadas para que tengas el control total de tus finanzas
+                    </p>
+                </div>
+                
+                <div class="features__grid">
+                    <!-- Card 1 -->
+                    <div class="card card--hover feature-card">
+                        <div class="card__icon card__icon--primary">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Visualización en tiempo real</h3>
+                            <p class="card__text">
+                                Gráficos interactivos y dashboard personalizado para ver tus ingresos, 
+                                gastos y balances al instante.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="card card--hover feature-card">
+                        <div class="card__icon card__icon--secondary">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Metas de ahorro</h3>
+                            <p class="card__text">
+                                Define objetivos financieros y sigue tu progreso con recordatorios 
+                                inteligentes para alcanzar tus metas.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="card card--hover feature-card">
+                        <div class="card__icon card__icon--accent">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Alertas inteligentes</h3>
+                            <p class="card__text">
+                                Recibe notificaciones personalizadas sobre vencimientos, gastos inusuales 
+                                y oportunidades de ahorro.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="card card--hover feature-card">
+                        <div class="card__icon card__icon--primary">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Seguridad bancaria</h3>
+                            <p class="card__text">
+                                Encriptación de nivel bancario y autenticación de dos factores 
+                                para proteger tu información.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="card card--hover feature-card">
+                        <div class="card__icon card__icon--secondary">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Apps multiplataforma</h3>
+                            <p class="card__text">
+                                Accede desde cualquier dispositivo: web, iOS y Android con 
+                                sincronización en la nube.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="card card--hover feature-card">
+                        <div class="card__icon card__icon--accent">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Reportes automáticos</h3>
+                            <p class="card__text">
+                                Genera reportes mensuales, anuales y personalizados en PDF 
+                                para declaraciones o análisis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN CTA INTERMEDIA -->
+        <section class="cta-section">
+            <div class="cta-section__container">
+                <h2>Comienza a tomar el control hoy mismo</h2>
+                <p class="lead">
+                    Únete a miles de usuarios que ya transformaron su relación con el dinero
+                </p>
+                <button class="btn btn--outline btn--large" data-toggle="modal" data-target="#modalRegistro">
+                    Crear cuenta gratis
+                </button>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN BENEFICIOS -->
+        <section id="beneficios" class="section bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="https://via.placeholder.com/500x400/10b981/ffffff?text=Ahorra+Inteligentemente" 
+                             alt="Beneficios SmartBudget" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Por qué elegir SmartBudget</h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success mr-2"></i>
+                                <strong>100% gratuito para comenzar</strong> - Sin tarjeta de crédito requerida
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success mr-2"></i>
+                                <strong>Conexión bancaria segura</strong> - Tecnología de encriptación avanzada
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success mr-2"></i>
+                                <strong>Insights personalizados</strong> - IA que aprende de tus hábitos
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success mr-2"></i>
+                                <strong>Soporte premium</strong> - Asistencia por chat, email y teléfono
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#modalDemo">
+                            Explorar todas las ventajas
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- ========================================
+         FOOTER - Pie de página
+         Etiqueta semántica: <footer>
+    ========================================= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__grid">
+                <!-- Columna 1: Brand -->
+                <div class="footer__column">
+                    <h3 class="footer__brand">
+                        Smart<span>Budget</span>
+                    </h3>
+                    <p class="mt-3">
+                        La herramienta más intuitiva para gestionar tus finanzas personales 
+                        y alcanzar tus metas económicas.
+                    </p>
+                </div>
+                
+                <!-- Columna 2: Producto -->
+                <div class="footer__column">
+                    <h4 class="footer__title">Producto</h4>
+                    <nav class="footer__links">
+                        <a href="#funcionalidades" class="footer__link">Funcionalidades</a>
+                        <a href="#precios" class="footer__link">Precios</a>
+                        <a href="#" class="footer__link">Seguridad</a>
+                        <a href="#" class="footer__link">Integraciones</a>
+                    </nav>
+                </div>
+                
+                <!-- Columna 3: Compañía -->
+                <div class="footer__column">
+                    <h4 class="footer__title">Compañía</h4>
+                    <nav class="footer__links">
+                        <a href="#" class="footer__link">Sobre nosotros</a>
+                        <a href="#" class="footer__link">Blog</a>
+                        <a href="#" class="footer__link">Carreras</a>
+                        <a href="#" class="footer__link">Contacto</a>
+                    </nav>
+                </div>
+                
+                <!-- Columna 4: Legal -->
+                <div class="footer__column">
+                    <h4 class="footer__title">Legal</h4>
+                    <nav class="footer__links">
+                        <a href="#" class="footer__link">Términos de uso</a>
+                        <a href="#" class="footer__link">Privacidad</a>
+                        <a href="#" class="footer__link">Cookies</a>
+                        <a href="#" class="footer__link">Licencias</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 SmartBudget. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ========================================
+         MODALES DE BOOTSTRAP 4
+         Modal de Registro y Modal de Demo
+    ========================================= -->
+    
+    <!-- Modal: Registro -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRegistroLabel">
+                        <i class="fas fa-user-plus text-primary mr-2"></i>
+                        Crear cuenta gratis
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nombreCompleto">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombreCompleto" 
+                                   placeholder="Ej: María González" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailRegistro">Correo electrónico</label>
+                            <input type="email" class="form-control" id="emailRegistro" 
+                                   placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordRegistro">Contraseña</label>
+                            <input type="password" class="form-control" id="passwordRegistro" 
+                                   placeholder="Mínimo 8 caracteres" required minlength="8">
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="terminosCheckbox" required>
+                            <label class="custom-control-label" for="terminosCheckbox">
+                                Acepto los términos y condiciones
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-check mr-2"></i> Crear cuenta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal: Ver Demo -->
+    <div class="modal fade" id="modalDemo" tabindex="-1" role="dialog" aria-labelledby="modalDemoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDemoLabel">
+                        <i class="fas fa-play-circle text-primary mr-2"></i>
+                        Demo de SmartBudget
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="mt-4">
+                        <h5>¿Qué verás en el demo?</h5>
+                        <ul>
+                            <li>Dashboard principal con tus finanzas en tiempo real</li>
+                            <li>Cómo crear presupuestos y metas de ahorro</li>
+                            <li>Integración con tus cuentas bancarias</li>
+                            <li>Reportes y análisis personalizados</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#modalRegistro">
+                        ¡Me convencí! Crear cuenta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ========================================
+         SCRIPTS - jQuery, Popper, Bootstrap
+    ========================================= -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

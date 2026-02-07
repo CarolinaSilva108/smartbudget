@@ -1,0 +1,171 @@
+// ==========================================================================
+// PAGE - Home (Landing Page)
+// ==========================================================================
+
+/* SECCIÓN HERO - Primera impresión */
+.hero {
+    padding: $spacing-3xl $spacing-md;
+    background: linear-gradient(135deg, rgba($color-primary, 0.05) 0%, rgba($color-accent, 0.05) 100%);
+
+    @include respond-above(md) {
+        padding: 6rem $spacing-md;
+    }
+
+    &__container {
+        max-width: $breakpoint-xl;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $spacing-xl;
+        align-items: center;
+
+        @include respond-above(md) {
+            grid-template-columns: 1fr 1fr;
+            gap: $spacing-3xl;
+        }
+    }
+
+    &__content {
+        @include flex-column;
+        gap: $spacing-lg;
+    }
+
+    &__title {
+        @include fade-in;
+
+        span {
+            @extend .text-gradient;
+        }
+    }
+
+    &__description {
+        font-size: $font-size-lg;
+        color: $color-gray-600;
+        line-height: 1.8;
+    }
+
+    &__cta {
+        display: flex;
+        gap: $spacing-md;
+        flex-wrap: wrap;
+    }
+
+    &__image {
+        position: relative;
+
+        img {
+            border-radius: $border-radius-xl;
+            box-shadow: $shadow-2xl;
+        }
+    }
+}
+
+/* SECCIÓN FEATURES - Características principales */
+.features {
+    padding: $spacing-3xl $spacing-md;
+    background-color: $color-white;
+
+    &__container {
+        max-width: $breakpoint-xl;
+        margin: 0 auto;
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: $spacing-3xl;
+
+        h2 {
+            margin-bottom: $spacing-md;
+        }
+
+        p {
+            font-size: $font-size-lg;
+            color: $color-gray-600;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $spacing-xl;
+
+        @include respond-above(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond-above(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* SECCIÓN CTA - Call to Action */
+.cta-section {
+    padding: $spacing-3xl $spacing-md;
+    @include gradient-primary;
+    color: $color-white;
+    text-align: center;
+
+    &__container {
+        max-width: $breakpoint-lg;
+        margin: 0 auto;
+    }
+
+    h2 {
+        color: $color-white;
+        margin-bottom: $spacing-md;
+    }
+
+    p {
+        color: rgba($color-white, 0.9);
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-xl;
+    }
+
+    .btn--outline {
+        border-color: $color-white;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-primary;
+        }
+    }
+}
+
+/* SECCIÓN STATS - Estadísticas */
+.stats {
+    padding: $spacing-3xl $spacing-md;
+    background-color: $color-gray-50;
+
+    &__container {
+        max-width: $breakpoint-xl;
+        margin: 0 auto;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: $spacing-xl;
+        text-align: center;
+    }
+
+    &__item {
+        h3 {
+            font-size: $font-size-4xl;
+            font-weight: $font-weight-extrabold;
+            background: linear-gradient(135deg, $color-primary 0%, $color-accent 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: $spacing-xs;
+        }
+
+        p {
+            color: $color-gray-600;
+            font-size: $font-size-base;
+        }
+    }
+}

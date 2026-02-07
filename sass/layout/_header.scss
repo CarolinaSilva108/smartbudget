@@ -1,0 +1,76 @@
+// ==========================================================================
+// LAYOUT - Header y Navbar
+// Usando metodología BEM (Block Element Modifier)
+// ==========================================================================
+
+/* NAVBAR - Componente principal de navegación */
+.navbar {
+    background-color: $color-white;
+    box-shadow: $shadow-sm;
+    position: sticky;
+    top: 0;
+    z-index: $z-index-sticky;
+
+    // Elemento: contenedor interno del navbar
+    &__container {
+        max-width: $breakpoint-xl;
+        margin: 0 auto;
+        padding: $spacing-sm $spacing-md;
+    }
+
+    // Elemento: logo/brand
+    &__brand {
+        font-family: $font-display;
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        color: $color-primary;
+        transition: color $transition-fast;
+
+        &:hover {
+            color: $color-primary-dark;
+        }
+    }
+
+    // Elemento: menú de navegación
+    &__menu {
+        display: flex;
+        gap: $spacing-md;
+
+        @include respond-below(md) {
+            display: none; // Ocultar en mobile (Bootstrap collapse lo manejará)
+        }
+    }
+
+    // Elemento: item individual del menú
+    &__item {
+        position: relative;
+    }
+
+    // Elemento: link de navegación
+    &__link {
+        color: $color-gray-700;
+        font-weight: $font-weight-medium;
+        padding: $spacing-xs $spacing-sm;
+        border-radius: $border-radius-sm;
+        transition: all $transition-fast;
+
+        &:hover {
+            color: $color-primary;
+            background-color: rgba($color-primary, 0.1);
+        }
+
+        // Modificador: link activo
+        &--active {
+            color: $color-primary;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    // Elemento: botón CTA en navbar
+    &__cta {
+        @include button-base;
+        @include button-variant($color-primary, $color-primary-dark);
+        padding: $spacing-xs $spacing-md;
+        margin-left: $spacing-sm;
+    }
+}

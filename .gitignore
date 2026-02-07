@@ -1,0 +1,8 @@
+# Ignorar node_modules y archivos temporales
+node_modules/
+.DS_Store
+*.log
+
+# Ignorar archivos de cache de SASS
+.sass-cache/
+*.css.map
