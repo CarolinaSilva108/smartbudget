@@ -1,28 +1,17 @@
-// ==========================================================================
-// MAIN STYLESHEET - SmartBudget
-// Patrón 7-1 de SASS
-// ==========================================================================
-
-// 1. ABSTRACTS - Variables y mixins (sin salida CSS)
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-// 2. BASE - Estilos base y reset
 @import 'base/reset';
 @import 'base/typography';
 
-// 3. LAYOUT - Estructura principal
 @import 'layout/header';
 @import 'layout/footer';
 
-// 4. COMPONENTS - Componentes reutilizables
 @import 'components/buttons';
 @import 'components/cards';
 
-// 5. PAGES - Estilos específicos por página
 @import 'pages/home';
 
-// 6. UTILITIES - Clases de utilidad
 .container {
     max-width: $breakpoint-xl;
     margin: 0 auto;

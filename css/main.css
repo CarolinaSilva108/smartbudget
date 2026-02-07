@@ -173,7 +173,6 @@ p {
   color: #4b5563;
 }
 
-/* NAVBAR - Componente principal de navegación */
 .navbar {
   background-color: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -482,7 +481,6 @@ p {
   }
 }
 
-/* SECCIÓN HERO - Primera impresión */
 .hero {
   padding: 6rem 1.5rem;
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
@@ -532,7 +530,6 @@ p {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-/* SECCIÓN FEATURES - Características principales */
 .features {
   padding: 6rem 1.5rem;
   background-color: #ffffff;
@@ -570,7 +567,6 @@ p {
   }
 }
 
-/* SECCIÓN CTA - Call to Action */
 .cta-section {
   padding: 6rem 1.5rem;
   background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
@@ -599,7 +595,6 @@ p {
   color: #2563eb;
 }
 
-/* SECCIÓN STATS - Estadísticas */
 .stats {
   padding: 6rem 1.5rem;
   background-color: #f9fafb;

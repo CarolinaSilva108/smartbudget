@@ -1,23 +1,16 @@
-// ==========================================================================
-// COMPONENT - Cards
-// ==========================================================================
-
 .card {
     @include card-base;
 
-    // Elemento: header de la card
     &__header {
         margin-bottom: $spacing-md;
         padding-bottom: $spacing-md;
         border-bottom: 1px solid $color-gray-200;
     }
 
-    // Elemento: cuerpo de la card
     &__body {
         margin-bottom: $spacing-md;
     }
 
-    // Elemento: título
     &__title {
         font-size: $font-size-xl;
         font-weight: $font-weight-bold;
@@ -25,20 +18,17 @@
         margin-bottom: $spacing-xs;
     }
 
-    // Elemento: subtítulo
     &__subtitle {
         font-size: $font-size-sm;
         color: $color-gray-600;
         margin-bottom: $spacing-sm;
     }
 
-    // Elemento: descripción/contenido
     &__text {
         color: $color-gray-600;
         line-height: 1.7;
     }
 
-    // Elemento: footer de la card
     &__footer {
         margin-top: $spacing-md;
         padding-top: $spacing-md;
@@ -46,7 +36,6 @@
         @include flex-between;
     }
 
-    // Elemento: icono
     &__icon {
         width: 48px;
         height: 48px;
@@ -55,7 +44,6 @@
         margin-bottom: $spacing-md;
         font-size: $font-size-2xl;
 
-        // Modificador: icono primario
         &--primary {
             background-color: rgba($color-primary, 0.1);
             color: $color-primary;
@@ -72,7 +60,6 @@
         }
     }
 
-    // Modificador: card con hover destacado
     &--hover {
         cursor: pointer;
         transition: all $transition-base;
@@ -83,7 +70,6 @@
         }
     }
 
-    // Modificador: card con bordes de color
     &--bordered {
         border: 2px solid $color-gray-200;
 
@@ -93,7 +79,6 @@
     }
 }
 
-// Card feature (para sección de características)
 .feature-card {
     @extend .card;
     text-align: center;
