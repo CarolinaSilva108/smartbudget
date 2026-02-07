@@ -1,7 +1,16 @@
-# Ignorar node_modules y archivos temporales
-node_modules/
+# Ignorar node_modules/
+.sass-cache/
+*.css.map
 .DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
 *.log
+
+Informe_Tecnico_SmartBudget.pdf
+JUSTIFICACION_TECNICA.md
+GUIA_ENTREGA.md
+*.docx
 
 # Ignorar archivos de cache de SASS
 .sass-cache/
